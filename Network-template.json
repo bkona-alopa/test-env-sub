@@ -7,5 +7,6 @@
   "ENV": "$ENVI",
   "model_number": "$MODEL_NUMBER",
   "BUILD": "$BUILD_NO",
-  "stream_name": "$FIREHOSE_STREAM_NAME"
+  "stream_name": "$FIREHOSE_STREAM_NAME",
+  "feature_enabled": $FEATURE_ENABLED
 }
