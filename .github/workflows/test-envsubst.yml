@@ -1,0 +1,33 @@
+name: Test envsubst with file
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      API_URL: https://api.example.com
+      CLOUD_URL: https://cloud.example.com
+      FEATURE_ENABLED: true   # 👈 boolean
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run envsubst
+        uses: danielr1996/envsubst-action@1.1.0
+        with:
+          input: Network-template.json   # 👈 your file
+          output: Network.json           # 👈 generated file
+
+      - name: Show result
+        run: |
+          echo "===== OUTPUT ====="
+          cat Network.json
+          echo "=================="
+
+      - name: Validate JSON
+        run: |
+          jq . Network.json
