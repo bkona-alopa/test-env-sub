@@ -1,0 +1,11 @@
+{
+  "API_URL": "$API_URL",
+  "CLOUD_URL": "$CLOUD_URL",
+  "mfg_date": "$MFG_DATE",
+  "POOL_ID": "$POOL_ID",
+  "version_number": "$VERSION",
+  "ENV": "$ENVI",
+  "model_number": "$MODEL_NUMBER",
+  "BUILD": "$BUILD_NO",
+  "stream_name": "$FIREHOSE_STREAM_NAME"
+}
